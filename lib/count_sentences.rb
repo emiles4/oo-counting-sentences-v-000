@@ -9,14 +9,21 @@ class String
   end
 
   def question?
-
+    if self.end_with?("?") then return true
+    else return false
+    end
   end
 
   def exclamation?
-
+    if self.end_with?("!") then return true
+    else return false
+    end
   end
 
   def count_sentences
+    def count_sentences
+        new_array = self.split(/[.?!]/).reject {|string| string.empty?}
+        return new_array.length
+      end
+    end
 
-  end
-end
